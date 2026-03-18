@@ -3,7 +3,7 @@
 // Delega la interactividad al SearchBar (cliente).
 
 import Link from "next/link";
-import SearchBar from "./SearchBar";
+import SearchBar from "@/components/SearchBar";
 import { siteConfig } from "@/lib/data";
 
 export default function Navbar() {
