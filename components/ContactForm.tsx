@@ -19,36 +19,30 @@ export default function ContactForm() {
         </h2>
         <form action={formAction} className="flex flex-col gap-4">
           <div>
-            <input name="name" placeholder="Nombre"
-              className="w-full border rounded-md px-3 py-2" />
+            <input name="name" placeholder="Nombre" className="w-full border rounded-md px-3 py-2" />
             {state.errors?.name && (
               <p className="text-red-500 text-sm mt-1">{state.errors.name}</p>
             )}
           </div>
           <div>
-            <input name="email" placeholder="Email"
-              className="w-full border rounded-md px-3 py-2" />
+            <input name="email" placeholder="Email" className="w-full border rounded-md px-3 py-2" />
             {state.errors?.email && (
               <p className="text-red-500 text-sm mt-1">{state.errors.email}</p>
             )}
           </div>
           <div>
-            <input name="subject" placeholder="Asunto"
-              className="w-full border rounded-md px-3 py-2" />
+            <input name="subject" placeholder="Asunto" className="w-full border rounded-md px-3 py-2" />
             {state.errors?.subject && (
               <p className="text-red-500 text-sm mt-1">{state.errors.subject}</p>
             )}
           </div>
           <div>
-            <textarea name="message" placeholder="Mensaje" rows={5}
-              className="w-full border rounded-md px-3 py-2" />
+            <textarea name="message" placeholder="Mensaje" rows={5} className="w-full border rounded-md px-3 py-2" />
             {state.errors?.message && (
               <p className="text-red-500 text-sm mt-1">{state.errors.message}</p>
             )}
           </div>
-          <button type="submit" disabled={isPending}
-            className="bg-blue-500 text-white py-2 rounded-md
-              hover:bg-blue-600 transition-colors disabled:opacity-50">
+          <button type="submit" disabled={isPending} className="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50">
             {isPending ? "Enviando..." : "Enviar"}
           </button>
           {state.message && (
